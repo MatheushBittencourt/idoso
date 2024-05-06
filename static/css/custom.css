@@ -1,16 +1,12 @@
 @charset "UTF-8";
-.subTituloFooter {
-  font-size: 1.2rem;
-  color: #fff;
+.highlight-text {
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(60, 195, 159, 0.3) 50%);
+  display: inline-block;
 }
 
 .footer {
   background: linear-gradient(to right, #24755F, #309C7F);
   color: #FFF;
-}
-
-.textoFooter {
-  text-align: justify;
 }
 
 #subscribe-button {
@@ -47,7 +43,7 @@
   width: 0;
   height: 2px;
   background-color: transparent;
-  transition: width 0.3s ease, left 0.3s ease;
+  transition: width 0.5s ease, left 0.5s ease;
 }
 
 .linkFooter:hover::after {

@@ -9,7 +9,7 @@ var clinicas = [
     },
     {
         nome: "CLINICA MÉDICA MANDELLI",
-        endereco: " RUA MIGUEL MATTE, R. Eleutéria Maria Eusébia Caetano, 390 - Pioneiros, Balneário Camboriú - SC, 88331-030",
+        endereco: "R. Eleutéria Maria Eusébia Caetano, 390 - Pioneiros, Balneário Camboriú - SC, 88331-030",
         telefone: " (47) 3367-0225",
         site: "http://www.clinicaemagrecimento.com.br/",
         imagem: "/static/images/clinicas/mandelli.png"
@@ -80,7 +80,7 @@ function adicionarCardsClinicas() {
                 <div class="card-body">
                     <h5 class="card-title">${clinica.nome}</h5>
                     <p class="card-text">${clinica.endereco}<br>${clinica.telefone}</p>
-                    <a href="${clinica.site}" target="_blank" class="btn w-100 btn-primary">Visitar site</a>
+                    <a href="${clinica.site}" target="_blank" class="btn btn-primary bg-primary w-100">Visitar site</a>
                 </div>
             </div>
         `;

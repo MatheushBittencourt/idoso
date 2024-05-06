@@ -1,7 +1,7 @@
-.subTituloFooter {
-    font-size: 1.2rem;
-    color: #fff;
-}
+// .subTituloFooter {
+//     font-size: 1.2rem;
+//     color: #fff;
+// }
 
 
 .footer {
@@ -9,9 +9,9 @@
     color: #FFF;
 }
 
-.textoFooter{
-    text-align: justify;
-}
+// .textoFooter{
+//     text-align: justify;
+// }
 #subscribe-button{
     margin-top: 5px;
     margin-right: 5px;
@@ -46,7 +46,7 @@
     width: 0;
     height: 2px; 
     background-color: transparent;
-    transition: width 0.3s ease, left 0.3s ease;
+    transition: width 0.5s ease, left 0.5s ease;
 }
 
 .linkFooter:hover::after{
