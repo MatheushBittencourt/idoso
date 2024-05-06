@@ -1,4 +1,57 @@
 @charset "UTF-8";
+.highlight-text {
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(60, 195, 159, 0.3) 50%);
+  display: inline-block;
+}
+
+.footer {
+  background: linear-gradient(to right, #24755F, #309C7F);
+  color: #FFF;
+}
+
+#subscribe-button {
+  margin-top: 5px;
+  margin-right: 5px;
+  width: 100px;
+  border-color: transparent;
+  color: #FFF;
+  background: linear-gradient(to right, #24755F, #309C7F);
+  transition: background-color 0.3s ease;
+}
+
+#subscribe-button:hover {
+  background: linear-gradient(to right, #7ec5b2, #7ec5b2);
+}
+
+#inputEmail {
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.linkFooter {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.linkFooter::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.linkFooter:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: #FFF;
+}
+
 .lh-1 {
   line-height: 2.5rem !important;
 }

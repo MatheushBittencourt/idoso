@@ -1,5 +1,7 @@
 @use "sass:map";
 
+@import "custom-title";
+@import "style-footer";
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/functions";
