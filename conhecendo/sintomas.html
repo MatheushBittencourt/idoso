@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <span class="fs-5 py-3 d-flex justify-content-center fw-bold mb-4">
+            <h3 class="highlight-text">Sintomas</h3>
+        </span>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center py-5">
+                    <div class="col-12 py-3">
+                        <p class="fs-7">O Alzheimer muitas vezes começa com pequenos esquecimentos que parecem
+                            inofensivos, mas
+                            com o tempo
+                            se tornam mais frequentes e graves. As pessoas afetadas podem esquecer conversas
+                            recentes,
+                            compromissos, onde colocaram objetos comuns ou até mesmo nomes de pessoas queridas. Esse
+                            tipo de
+                            esquecimento é diferente do que ocorre com o envelhecimento normal, e é um dos primeiros
+                            sinais do
+                            Alzheimer.
+                            Conforme a doença progride, realizar tarefas cotidianas simples pode se tornar um
+                            desafio para quem
+                            tem Alzheimer. Coisas que antes eram feitas automaticamente, como cozinhar uma refeição
+                            simples ou
+                            tomar banho, podem se tornar confusas e difíceis. Isso acontece porque o Alzheimer afeta
+                            a
+                            capacidade da pessoa de organizar pensamentos e seguir instruções.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <img src="/static/images/conhecendo/sintomas01.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <img src="/static/images/conhecendo/sintomas02.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12 py-5">
+                        <p class="fs-6 pt-3">Um dos aspectos mais difíceis do Alzheimer é a confusão e desorientação
+                            que pode causar.
+                            A pessoa
+                            afetada pode ficar confusa sobre onde está, que horas são, ou mesmo quem são as pessoas
+                            ao seu
+                            redor. Essa desorientação pode ser assustadora tanto para a pessoa com Alzheimer quanto
+                            para seus
+                            familiares e cuidadores.
+                            Conforme a doença avança, é comum que as pessoas com Alzheimer tenham dificuldade em
+                            encontrar as
+                            palavras certas para se expressar. Elas podem começar a repetir as mesmas palavras ou
+                            frases, ou
+                            então ter dificuldade em entender o que as outras pessoas estão dizendo. Isso pode levar
+                            a
+                            frustração e isolamento social.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12 py-3 pb-5">
+                        <p class="fs-6">O Alzheimer não afeta apenas a memória e o pensamento, mas também as emoções
+                            e a
+                            personalidade da
+                            pessoa afetada. Elas podem ficar mais irritadas, deprimidas, ansiosas ou apáticas. Isso
+                            pode ser
+                            desafiador para os cuidadores, que muitas vezes se deparam com comportamentos
+                            inesperados e
+                            difíceis de lidar.</p>
+                        <p class="fs-6">À medida que o Alzheimer progride, a pessoa afetada pode ter dificuldade em
+                            reconhecer
+                            rostos
+                            familiares, incluindo membros da família e amigos próximos. Além disso, objetos
+                            familiares podem
+                            se tornar desconhecidos. Essa perda de reconhecimento pode ser angustiante tanto para a
+                            pessoa
+                            com Alzheimer quanto para seus entes queridos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <img src="/static/images/conhecendo/sintomas03.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between py-5">
+            <a class="btn btn-outline-gray d-flex gap-2 align-items-center" href="/conhecendo/dicas.html">
+                <span class="fa-solid fa-arrow-left fs-6"></span>
+                <span class="fs-6">Voltar</span>
+            </a>
+            <a class="btn btn-outline-primary d-flex gap-2 align-items-center" href="/conhecendo/cuidados.html">
+                <span class="fs-6">Avançar</span>
+                <i class="fa-solid fa-arrow-right fs-6"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+        // Função para carregar o header
+        function loadHeader() {
+            fetch('../header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header').innerHTML = html;
+                });
+        }
+
+        // Função para carregar o footer
+        function loadFooter() {
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                });
+        }
+
+        // Chama as funções para carregar o header e o footer
+        loadHeader();
+        loadFooter();
+    </script>
+    <script src="https://kit.fontawesome.com/10b4b15b8d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
