@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <span class="fs-5 py-3 d-flex justify-content-center fw-bold mb-4">
+            <h3 class="highlight-text">Estagios</h3>
+        </span>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center py-5">
+                    <div class="col-12 py-3">
+                        <p class="fs-7">   Neste estágio inicial: os sintomas podem ser leves e facilmente ignorados ou 
+                            confundidos com o envelhecimento normal.
+                            A pessoa pode ter dificuldade em lembrar informações recentes, como onde colocou as chaves, ou pode 
+                            perder o interesse em atividades que antes gostava.
+                            Os sintomas podem ser sutis o suficiente para que a pessoa possa continuar vivendo de forma 
+                            independente, mas podem ser notados por familiares próximos.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <img src="/static/images/estagios/estagio1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <img src="/static/images/estagios/estagio2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12 py-5">
+                        <p class="fs-6 pt-3">Estágio Intermediário:
+
+                            Conforme o Alzheimer progride para o estágio intermediário, os sintomas 
+                            se tornam mais evidentes e começam a interferir nas atividades diárias da pessoa.
+                            A perda de memória e a confusão se aprofundam, e a pessoa pode ter dificuldade em 
+                            reconhecer membros da família ou amigos próximos.
+                            Problemas de comunicação se tornam mais frequentes, com a pessoa tendo dificuldade
+                             em encontrar palavras ou seguir uma conversa.
+                            Dificuldades cognitivas, como resolver problemas simples ou planejar tarefas, 
+                            também podem se tornar mais evidentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12 py-3 pb-5">
+                        <p class="fs-6">Estágio Avançado:
+
+                            No estágio avançado do Alzheimer, os sintomas se tornam muito mais graves e debilitantes.
+                            A pessoa pode perder a capacidade de realizar tarefas básicas de autocuidado, como vestir-se,
+                             tomar banho ou se alimentar.
+                            A comunicação pode ser extremamente limitada, com a pessoa tendo dificuldade em falar ou 
+                            entender a fala dos outros.
+                            A perda de memória é generalizada, com a pessoa incapaz de reconhecer membros da família ou 
+                            recordar eventos passados.
+                            A capacidade de locomoção também pode ser afetada, com a pessoa se tornando incapaz de se mover 
+                            de forma independente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <img src="/static/images/estagios/estagio3.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between py-5">
+            <a class="btn btn-outline-gray d-flex gap-2 align-items-center" href="/conhecendo/dicas.html">
+                <span class="fa-solid fa-arrow-left fs-6"></span>
+                <span class="fs-6">Voltar</span>
+            </a>
+            <a class="btn btn-outline-primary d-flex gap-2 align-items-center" href="/conhecendo/cuidados.html">
+                <span class="fs-6">Avançar</span>
+                <i class="fa-solid fa-arrow-right fs-6"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+        // Função para carregar o header
+        function loadHeader() {
+            fetch('../header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header').innerHTML = html;
+                });
+        }
+
+        // Função para carregar o footer
+        function loadFooter() {
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+                });
+        }
+
+        // Chama as funções para carregar o header e o footer
+        loadHeader();
+        loadFooter();
+    </script>
+    <script src="https://kit.fontawesome.com/10b4b15b8d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
