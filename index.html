@@ -22,12 +22,12 @@
 		</header>
 
 		<section id="sobre" class="container my-5">
-			<div class="row align-items-center">
-				<div class="col-md-6 mb-4 mb-md-0">
-					<img src="https://via.placeholder.com/400" alt="Sobre o Alzheimer" class="img-fluid rounded shadow">
+			<div class="row">
+				<div class="col-md-6 mb-md-0 p-0">
+					<img src="static/images/sobre_alzheimer.jpeg" alt="Sobre o Alzheimer" class="img-fluid rounded-start shadow h-100">
 				</div>
-				<div class="col-md-6">
-					<div class="p-4 bg-white shadow rounded">
+				<div class="col-md-6 p-0">
+					<div class="p-4 bg-white shadow rounded-end h-100">
 						<h2 class="display-4">Sobre o Alzheimer</h2>
 						<p>O Alzheimer é uma doença neurodegenerativa progressiva que afeta a memória, o pensamento e o
 							comportamento. É a forma mais comum de demência em idosos.</p>
@@ -39,9 +39,9 @@
 		</section>
 
 		<section id="sintomas" class="container my-5">
-			<div class="row align-items-center flex-column-reverse flex-md-row">
-				<div class="col-md-6 mb-4 mb-md-0">
-					<div class="p-4 bg-white shadow rounded">
+			<div class="row flex-column-reverse flex-md-row">
+				<div class="col-md-6 mb-md-0 p-0">
+					<div class="p-4 bg-white shadow rounded-start h-100">
 						<h2 class="display-4">Sintomas do Alzheimer</h2>
 						<p>Os sintomas podem variar, mas os mais comuns incluem:</p>
 						<ul class="list-unstyled">
@@ -55,20 +55,20 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<img src="https://via.placeholder.com/400" alt="Sintomas do Alzheimer"
-						class="img-fluid rounded shadow">
+				<div class="col-md-6 p-0">
+					<img src="static/images/sintomas.png" alt="Sintomas do Alzheimer"
+						class="img-fluid rounded-end shadow h-100">
 				</div>
 			</div>
 		</section>
 
 		<section id="diagnostico" class="container my-5">
-			<div class="row align-items-center">
-				<div class="col-md-6 mb-4 mb-md-0">
-					<img src="https://via.placeholder.com/400" alt="Sobre o Alzheimer" class="img-fluid rounded shadow">
+			<div class="row">
+				<div class="col-md-6 mb-md-0 p-0">
+					<img src="static/images/fevereiro-roxo.jpg" alt="Sobre o Alzheimer" class="img-fluid rounded-start shadow h-100">
 				</div>
-				<div class="col-md-6">
-					<div class="p-4 bg-white shadow rounded">
+				<div class="col-md-6 p-0">
+					<div class="p-4 bg-white shadow rounded-end h-100">
 						<h2 class="display-4">Diagnóstico e Tratamento</h2>
 						<ul class="list-unstyled">
 							<li class="mb-2"><i class="fas fa-memory mr-2"></i> O diagnóstico do Alzheimer geralmente é
@@ -89,22 +89,22 @@
 					<div class="col-12">
 						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
-								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									<img src="https://mdhealth.com.br/wp-content/uploads/2022/02/ocorrencia-de-sintomas-depressivos-na-fase-pre-clinica-da-doenca-de-alzheimer-um-estudo-de-base-populacional.png"
-										class="d-block w-100" alt="...">
+										class="d-block w-100 object-fit-cover" height="700px;" alt="imagem Carrosel">
 								</div>
 								<div class="carousel-item">
 									<img src="https://hubconteudo.dasa.com.br/wp-content/uploads/2022/09/abre.jpg"
-										class="d-block w-100" alt="...">
+										class="d-block w-100 object-fit-cover" height="700px;" alt="imagem Carrosel">
 								</div>
 								<div class="carousel-item">
 									<img src="https://www.saudebemestar.pt/media/88255/alzheimer.jpg"
-										class="d-block w-100" alt="...">
+										class="d-block w-100 object-fit-cover" height="700px;" alt="imagem Carrosel">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -121,16 +121,7 @@
 					</div>
 				</div>
 			</div>
-			<style>
-				#carouselExampleIndicators img {
-					height: 700px;
-					/* Altura desejada para as imagens */
-					object-fit: cover;
-					/* Garante que as imagens mantenham suas proporções */
-				}
-			</style>
 		</section>
-
 
 		<section id="cards" class="mb-5">
 			<span class="fs-5 py-3 d-flex justify-content-center fw-bold mb-4">
@@ -139,7 +130,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+						<img src="static/images/idosos_no_cafe.png" class="card-img-top object-fit-cover" alt="Casal de idosos tomando café juntos" height="245.98px;">
 						<div class="card-body">
 							<h5 class="card-title">Rotina</h5>
 							<p class="card-text">Estabeleça uma rotina diária para o idoso com Alzheimer. Isso pode
@@ -150,7 +141,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+						<img src="static/images/idosos_conversando.jpg" class="card-img-top object-fit-cover" alt="Idosos rindo e conversando" height="245.98px;">
 						<div class="card-body">
 							<h5 class="card-title">Comunicação</h5>
 							<p class="card-text">Comunique-se de forma clara e simples. Evite perguntas complexas e
@@ -161,7 +152,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4">
-						<img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+						<img src="static/images/idosa-risonha.png" class="card-img-top object-fit-cover" alt="Idosa e jovem conversando" height="245.98px;">
 						<div class="card-body">
 							<h5 class="card-title">Ambiente</h5>
 							<p class="card-text">Mantenha um ambiente seguro, livre de obstáculos e com poucas mudanças.
