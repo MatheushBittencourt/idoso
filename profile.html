@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="static/css/custom.css" rel="stylesheet">
     <title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+	<div id="header"></div>
+
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold profile_name">Nome do paciente</span><span class="text-black-50 profile_email">email@dominio.com</span><span> </span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -18,33 +21,141 @@
                         <h4 class="text-right">Cadastro paciente</h4>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Nome</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                        <div class="col-md-6"><label class="labels">Sobrenome</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                        <div class="col-md-6"><label class="labels">Nome</label><input id="name" type="text" class="form-control" placeholder="first name" value=""></div>
+                        <div class="col-md-6"><label class="labels">Sobrenome</label><input id="last_name" type="text" class="form-control" value="" placeholder="surname"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Número de telefone</label><input type="text" class="form-control" placeholder="Digite o número" value=""></div>
-                        <div class="col-md-12"><label class="labels">Endereço</label><input type="text" class="form-control" placeholder="Digite seu endereço" value=""></div>
-                        <div class="col-md-12"><label class="labels">CEP</label><input type="text" class="form-control" placeholder="Digite o CEP" value=""></div>
-                        <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="Digite seu e-mail" value=""></div>
-                        <div class="col-md-12"><label class="labels">Estado</label><input type="text" class="form-control" placeholder="Digite seu estado" value=""></div>
+                        <div class="col-md-12"><label class="labels">Número de telefone</label><input id="phone" type="text" class="form-control" placeholder="Digite o número" value=""></div>
+                        <div class="col-md-12"><label class="labels">Logradouro</label><input id="street" type="text" class="form-control" placeholder="Digite seu endereço" value=""></div>
+                        <div class="col-md-12"><label class="labels">CEP</label><input onblur="pesquisacep(this.value)" id="zip_code" type="text" class="form-control" placeholder="Digite o CEP" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email</label><input id="email" type="text" class="form-control" placeholder="Digite seu e-mail" value=""></div>
+                        <div class="col-md-12"><label class="labels">Estado</label><input id="state" type="text" class="form-control" placeholder="Digite seu estado" value=""></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Bairro</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                        <div class="col-md-6"><label class="labels">Cidade</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                        <div class="col-md-6"><label class="labels">Bairro</label><input id="neighbourhood" type="text" class="form-control" placeholder="neighbourhood" value=""></div>
+                        <div class="col-md-6"><label class="labels">Cidade</label><input id="city" type="text" class="form-control" value="" placeholder="city"></div>
                     </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Salvar</button></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center experience"><span>Medicamentos</span></div><br>
-                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-                    <div class="col-md-12"><label class="labels">Informações uteis</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_1" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_2" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_3" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_4" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_5" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+                    <div class="col-md-12"><label class="labels">Medicamento 01</label><input id="medicine_6" type="text" class="form-control" placeholder="Medicamento" value=""></div>
+					<br>
+                    <div class="col-md-12"><label class="labels">Informações uteis</label><input id="info" type="text" class="form-control" placeholder="Informações" value=""></div>
                 </div>
             </div>
+			<div class="col-12 save-alert d-flex justify-content-center d-none">
+				<div class="alert alert-success col-10" role="alert">
+					Cadastro realizado com sucesso!
+				</div>
+			</div>
+			<div class="mb-3 text-center"><button class="btn btn-primary profile-button" type="button">Salvar</button></div>
         </div>
     </div>
     </div>
     </div>
+	<script>
+		function limpa_formulário_cep() {
+				//Limpa valores do formulário de cep.
+				document.getElementById('street').value=("");
+				document.getElementById('neighbourhood').value=("");
+				document.getElementById('city').value=("");
+				document.getElementById('state').value=("");
+		}
+
+		function meu_callback(conteudo) {
+			if (!("erro" in conteudo)) {
+				//Atualiza os campos com os valores.
+				document.getElementById('street').value=(conteudo.logradouro);
+				document.getElementById('neighbourhood').value=(conteudo.bairro);
+				document.getElementById('city').value=(conteudo.localidade);
+				document.getElementById('state').value=(conteudo.uf);
+			} //end if.
+			else {
+				//CEP não Encontrado.
+				limpa_formulário_cep();
+				alert("CEP não encontrado.");
+			}
+		}
+			
+		function pesquisacep(valor) {
+
+			//Nova variável "cep" somente com dígitos.
+			var cep = valor.replace(/\D/g, '');
+
+			//Verifica se campo cep possui valor informado.
+			if (cep != "") {
+
+				//Expressão regular para validar o CEP.
+				var validacep = /^[0-9]{8}$/;
+
+				//Valida o formato do CEP.
+				if(validacep.test(cep)) {
+
+					//Preenche os campos com "..." enquanto consulta webservice.
+					document.getElementById('street').value="...";
+					document.getElementById('neighbourhood').value="...";
+					document.getElementById('city').value="...";
+					document.getElementById('state').value="...";
+
+					//Cria um elemento javascript.
+					var script = document.createElement('script');
+
+					//Sincroniza com o callback.
+					script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+					//Insere script no documento e carrega o conteúdo.
+					document.body.appendChild(script);
+
+				} //end if.
+				else {
+					//cep é inválido.
+					limpa_formulário_cep();
+					alert("Formato de CEP inválido.");
+				}
+			} //end if.
+			else {
+				//cep sem valor, limpa formulário.
+				limpa_formulário_cep();
+			}
+		};
+		$(document).ready(function() {
+
+			const fields = [
+				"name", "last_name", "phone", "street", "zip_code",
+				"email", "state", "neighbourhood", "city",
+				"medicine_1", "medicine_2", "medicine_3",
+				"medicine_4", "medicine_5", "medicine_6", "info"
+			];
+
+			// Load all the inputs from localStorage
+			fields.forEach(field => {
+				$(`#${field}`).val(localStorage.getItem(field));
+			});
+
+			$(".profile_name").text(`${localStorage.getItem("name")} ${localStorage.getItem("last_name")}`);
+			$(".profile_email").text(localStorage.getItem("email"));
+
+			$(".profile-button").click(function() {
+				// Save all the inputs to localStorage
+				fields.forEach(field => {
+					localStorage.setItem(field, $(`#${field}`).val());
+				});
+
+				$(".profile_name").text(`${localStorage.getItem("name")} ${localStorage.getItem("last_name")}`);
+				$(".profile_email").text(localStorage.getItem("email"));
+
+				$(".save-alert").removeClass("d-none");
+			});
+
+
+		});
+	</script>
 </body>
 </html>

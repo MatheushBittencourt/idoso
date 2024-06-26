@@ -236,6 +236,45 @@ $colors-available: (
   'gray': $gray-colors,
 );
 
+// Bootstrap Variables
+$input-btn-padding-x: .625rem;
+
+$link-button-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "gray":       $gray,
+  "success":    map.get($success-colors, '700'),
+  "info":       map.get($info-colors, '800'),
+  "warning":    map.get($warning-colors, '800'),
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+@function hexToRGB($color) {
+    @return red($color) + ", " + green($color) + ", " + blue($color);
+}
+
+@each $key, $value in $link-button-colors {
+    .btn-link-#{ $key } {
+        --bs-btn-color: #{ $value } !important;
+        --bs-btn-bg: transparent;
+        --bs-btn-border-color: transparent;
+        --bs-btn-hover-color: #{ $value };
+        --bs-btn-hover-bg: rgba(#{ hexToRGB($value)}, .1);
+        --bs-btn-hover-border-color: transparent;
+        --bs-btn-focus-shadow-rgb: rgb(#{ hexToRGB($value)});
+        --bs-btn-active-color: #{ $value };
+        --bs-btn-active-bg: rgba(#{ hexToRGB($value)}, .2);
+        --bs-btn-active-border-color: transparent;
+    }
+}
+
+.disabled-anchor {
+    opacity: .65;
+    pointer-events: none;
+}
+
 @each $target, $color in $colors-available {
   @each $key, $value in $color {
 
